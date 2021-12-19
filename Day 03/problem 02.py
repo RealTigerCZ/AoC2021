@@ -8,12 +8,12 @@ for i in range(len(input)):
     input[i] = input[i][:-1]
 
 
-oxigen = input[:]
+oxygen = input[:]
 
 bit = 0
-while len(oxigen) > 1:
+while len(oxygen) > 1:
     zeros, ones = 0, 0
-    for item in oxigen:
+    for item in oxygen:
         if item[bit] == "0":
             zeros += 1
         elif item[bit] == "1":
@@ -21,9 +21,9 @@ while len(oxigen) > 1:
 
     char = "1" if ones >= zeros else "0"
     i = 0
-    while i < len(oxigen):
-        if oxigen[i][bit] != char:
-            oxigen.pop(i)
+    while i < len(oxygen):
+        if oxygen[i][bit] != char:
+            oxygen.pop(i)
         else:
             i += 1
     bit += 1
@@ -49,5 +49,6 @@ while len(CO2) > 1:
 
     bit += 1
 
-print(oxigen, CO2)
-print("Result: ", int(oxigen[0], 2) * int(CO2[0], 2))
+print("Oxygen: ", oxygen[0])
+print("CO2:    ", CO2[0])
+print("Result: ", int(oxygen[0], 2) * int(CO2[0], 2))
