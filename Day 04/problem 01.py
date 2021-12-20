@@ -30,24 +30,23 @@ def tick_number(n):
 def check_boards():
     global boards
     for index, board in enumerate(boards):
-        for line in board:
-            complete = True
-            for p in line:
-                if p != -1:
-                    complete = False
-                    break
-            if complete:
+        i = 0
+        for i in range(5):
+
+            #rows
+            j = 0
+            while j < 5 and board[i][j] == -1:
+                j += 1
+            if j == 5:
                 return index
 
-        for i in range(5):
-            complete = True
-            for j in range(5):
-                if board[i][j] != -1:
-                    complete = False
-                    break
+            #colombs
+            j = 0
+            while j < 5 and board[j][i] == -1:
+                j += 1
+            if j == 5:
+                return index
 
-        if complete:
-            return index
 
 
 final_board_index = None
@@ -57,8 +56,6 @@ while not final_board_index:
     tick_number(numbers[iterator])
     final_board_index = check_boards()
 
-#from pprint import pprint as pp
-#pp(saved_boards[final_board_index])
 
 sum = 0
 for line in boards[final_board_index]:
@@ -67,5 +64,5 @@ for line in boards[final_board_index]:
             sum += p
 
 sum *= numbers[iterator]
-print(numbers[iterator])
+#print(numbers[iterator])
 print(f"Result: ", sum)
