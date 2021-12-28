@@ -7,16 +7,16 @@ file.close()
 
 #Logic solution
 """
-? = intersection of sets
+∩ = intersection of sets
 / = without
 
-A = !4 ? 7 = 7 / 1
-B = !3 ? 4
+A = !4 ∩ 7 = 7 / 1
+B = !3 ∩ 4
 ---------
-C = 1 ? 2 = !6
+C = 1 ∩ 2 = !6
 D = !0
 E = !9
-F = !2 ? 1
+F = !2 ∩ 1
 G =
 --------- not needed
 
@@ -27,13 +27,13 @@ problematic:
 0, 6, 9
 2, 3, 5
 
-2 ? 1 != 1
-3 ? 1 = 1
-6 ? 1 != 1
+2 ∩ 1 != 1
+3 ∩ 1 = 1
+6 ∩ 1 != 1
 
-9 ? 1 = 1
-0 ? 1 = 1
-6 ? 1 != 1
+9 ∩ 1 = 1
+0 ∩ 1 = 1
+6 ∩ 1 != 1
 
 -------------------
 Actual solving method / aglorithm
