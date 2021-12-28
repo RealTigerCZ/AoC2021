@@ -7,16 +7,16 @@ file.close()
 
 #Logic solution
 """
-? = intersection of sets
+∩ = intersection of sets
 / = without
 
-A = !4 ? 7 = 7 / 1
-B = !3 ? 4
+A = !4 ∩ 7 = 7 / 1
+B = !3 ∩ 4
 ---------
-C = 1 ? 2 = !6
+C = 1 ∩ 2 = !6
 D = !0
 E = !9
-F = !2 ? 1
+F = !2 ∩ 1
 G =
 --------- not needed
 
@@ -27,29 +27,29 @@ problematic:
 0, 6, 9
 2, 3, 5
 
-2 ? 1 != 1
-3 ? 1 = 1
-6 ? 1 != 1
+2 ∩ 1 != 1
+3 ∩ 1 = 1
+6 ∩ 1 != 1
 
-9 ? 1 = 1
-0 ? 1 = 1
-6 ? 1 != 1
+9 ∩ 1 = 1
+0 ∩ 1 = 1
+6 ∩ 1 != 1
 
 -------------------
 Actual solving method / aglorithm
 A -> 7 / 1
-3 -> len = 5 and 3 ? 1 = 1
-B -> !3 ? 4
+3 -> len = 5 and 3 ∩ 1 = 1
+B -> !3 ∩ 4
 5 ->  contain b and len = 5
 2 -> len = 5 and is ont 5 or 3
 D -> B, D = 4 / 1 (we know B)
 0 -> !D
-6 -> 6 ? 1 != 1 and len = 6
+6 -> 6 ∩ 1 != 1 and len = 6
 9 -> len = 6 and is not 6 or 0
 
 
 MAPPING IS DONE MANUALLY TO NUMBERS WITH THAT ALGORITHM
-ITS NOT NEEDED TO MAP ALL SEGMENTS (for this problem)s
+ITS NOT NEEDED TO MAP ALL SEGMENTS (for this problem)
 """
 
 def sort(a): #sorts string
